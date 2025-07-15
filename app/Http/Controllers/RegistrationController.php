@@ -31,6 +31,6 @@ class RegistrationController extends Controller
 
 
 
-        return  'Saved';
+        return  redirect('/login');
     }
 }

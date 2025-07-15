@@ -26,10 +26,11 @@ class UserFactory extends Factory
         return [
             'first_name' => $this->faker->firstName(),
             'last_name'  => $this->faker->lastName(),
-            'username'   => $this->faker->unique()->userName(), // <-- Add this line
+            'username' => substr($this->faker->unique()->userName(), 0, 20),
             'email'      => $this->faker->unique()->safeEmail(),
             'password'   => Hash::make('password'),
             'role'       => $this->faker->randomElement(['Author', 'Reader']),
+            'profile_picture' => 'https://i.pravatar.cc/150?u=' . $this->faker->uuid,
             'created_at' => now(),
             'updated_at' => now(),
         ];

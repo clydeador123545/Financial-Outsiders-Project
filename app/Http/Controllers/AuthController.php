@@ -20,7 +20,7 @@ class AuthController extends Controller
             $request->session()->regenerate();
 
 
-            return 'Successfully login'; // use redirect 
+            return redirect('/');
 
         }
 

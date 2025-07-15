@@ -5,6 +5,9 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BlogpostController;
 use App\Http\Controllers\RegistrationController;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+
 
 Route::get('/',function() {
     return view('home');
@@ -25,3 +28,10 @@ Route::get('/login', function() {
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
+
+Route::get('/profile/{id}', function ($id){
+    $user = User::findOrFail($id);
+
+    return view('profile', ['user' => $user]);
+});
+

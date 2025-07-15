@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('username', 20)->unique();
             $table->string('password', 255);
             $table->enum('role', ['Author', 'Reader'])->default('Reader');
+            $table->string('profile_picture')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
@@ -37,6 +38,8 @@ return new class extends Migration
             $table->longText('payload');
             $table->integer('last_activity')->index();
         });
+
+        
     }
 
     /**
