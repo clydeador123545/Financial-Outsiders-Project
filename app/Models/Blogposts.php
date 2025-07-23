@@ -27,4 +27,9 @@ class Blogposts extends Model
         return $this->hasMany(Comments::class, 'blogpost_id');
     }
 
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'author_id');
+    }
+
 }

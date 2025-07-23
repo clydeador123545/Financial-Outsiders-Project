@@ -1,0 +1,37 @@
+html, body{
+    padding:0;
+    margin:0;   
+    background-color: rgb(130, 37, 37);
+}
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #AA3231;
+    align-items: center;
+    position: fixed;
+    width:100%;
+    z-index:1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+main{
+    padding-top:100px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    padding:0;
+    margin:0;
+}
+
+.account-links{
+    display: flex;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+    padding: 0 20px 0 10px;
+    font-size: large;
+}

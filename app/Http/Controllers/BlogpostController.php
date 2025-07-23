@@ -11,6 +11,8 @@ class BlogpostController extends Controller
 {
     public function store(Request $request)
     {
+        $posts = Blogposts::with('author')->get();
+        
         $request->validate([
             'title' => 'required|string|max:255',
             'content' => 'required|string',
@@ -33,4 +35,13 @@ class BlogpostController extends Controller
 
         return redirect()->back()->with('success', 'Blog post created!');
     }
+
+    public function show($id)
+    {
+        $post = Blogposts::findOrFail($id);  
+        $otherPosts = Blogposts::where('id', '!=', $id)->get(); 
+
+        return view('blogpost.show', compact('post', 'otherPosts'));
+    }
+    
 }
