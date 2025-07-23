@@ -1,0 +1,18 @@
+.blog{
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+    width:90%;
+}
+.main-content{
+    display: flex;
+    flex-direction: row;
+    margin:30px;
+}
+.suggested{
+    display: flex;
+    flex-direction: column;
+}
+.suggested a{
+    margin:10px;
+}

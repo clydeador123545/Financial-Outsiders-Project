@@ -6,6 +6,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Blogposts;
+use App\Models\Comments;
 
 class User extends Authenticatable
 {
@@ -18,9 +20,12 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
+        'username',
         'password',
+        'role',
     ];
 
     /**
@@ -45,4 +50,16 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function blogposts() {
+        return $this->hasMany(Blogposts::class, 'author_id');
+    }
+
+    public function comments() {
+        return $this->hasMany(Comments::class, 'user_id');
+    }
+
+    protected $primaryKey = 'user_id';
+
+
 }
