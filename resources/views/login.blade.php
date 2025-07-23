@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+@extends('layouts.app')
 
-    <title>Document</title>
-</head>
-<body>
+@section('content')
+    <h1>Login</h1>
     <form action="/login" method="POST">
         @csrf
         <div>
@@ -19,5 +16,5 @@
 
         <button type="submit">Login</button>
     </form>
-</body>
-</html>
+    <a href="/register">Don't Have an Account?</a>
+@endsection

@@ -1,0 +1,51 @@
+.home-content {
+    display: flex;
+    flex-direction: row;
+    justify-content:center; 
+    align-items: flex-start;
+    width: 100%;
+}
+
+
+.left-content {
+    flex: 2;               
+    max-width: 70%;      
+    background-color: #EFDBC0;  
+}
+
+.right-content {
+    flex: 1;               
+    max-width: 300px;    
+    background-color: black;
+    color: goldenrod;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height:99vh
+}
+.right-content a{
+    margin-bottom: 10px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 20px;        
+    flex-wrap: wrap;  
+}
+
+.box {
+    padding: 20px;
+    flex: 1 1 calc(20% - 10px); 
+    box-sizing: border-box;
+    background-color: black;
+    margin:10px;
+}
+.latest{
+    padding:20px;
+}
+
+.latest a{
+    color:black;
+}
