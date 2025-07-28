@@ -1,36 +1,65 @@
-html, body{
-    padding:0;
-    margin:0;   
-    background-color: rgb(130, 37, 37);
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #441414;
+    background-image:
+
+        radial-gradient(circle at center,
+            #AA3231 0%,
+            rgba(170, 50, 49, 0.75) 80%,
+            rgba(68, 20, 20, 0.9) 90%,
+            rgba(0, 0, 0, 1) 120%),
+
+        linear-gradient(0deg,
+            rgba(170, 50, 49, 0.12),
+            transparent 30%,
+            transparent 70%,
+            rgba(170, 50, 49, 0.12)),
+
+        linear-gradient(90deg,
+            rgba(170, 50, 49, 0.12),
+            transparent 30%,
+            transparent 70%,
+            rgba(170, 50, 49, 0.12));
+
+    background-size: 100% 100%;
+    background-position: top;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+
 }
 
-.top-bar{
+.top-bar {
     display: flex;
     justify-content: space-between;
-    background-color: #AA3231;
+    background-color: #660e0e;
     align-items: center;
     position: fixed;
-    width:100%;
-    z-index:1000;
+    width: 100%;
+    z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-main{
-    padding-top:100px;
+
+main {
+    padding-top: 100px;
 }
 
-.logo{
+.logo {
     display: flex;
     flex-direction: row;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
 
-.account-links{
+.account-links {
     display: flex;
 }
 
-a{
-    color:white;
+a {
+    color: white;
     text-decoration: none;
     padding: 0 20px 0 10px;
     font-size: large;
