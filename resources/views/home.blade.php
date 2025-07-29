@@ -33,18 +33,22 @@
                 <h2 class="atitle">LATEST Today</h2>
                 <div class="latest">
                     @foreach ($randomPosts as $post)
-                        <div class="latest-box">                                                   
-                            
+                        <div class="latest-box" style="display: flex; align-items: center; gap: 15px;">
+
+                            <!-- Random Image from Local Folder Script -->
                             @php
-                            $files = glob(public_path('images/artimages/*.png'));
-                             $path = count($files) ? 'images/artimages/' . basename($files[array_rand($files)]) : null;
+                                $files = glob(public_path('images/artimages/*.png'));
+                                $path = count($files) ? 'images/artimages/' . basename($files[array_rand($files)]) : null;
                             @endphp
 
                             @if ($path)
-                            <img src="{{ asset($path) }}" width="300" alt="Random Art">
+                                <div style="width: 300px; height: 200px; overflow: hidden; flex-shrink: 0;">
+                                    <img src="{{ asset($path) }}" alt="Random Art"
+                                        style="width: 300px; height: 200px; object-fit: cover; display: block;">
+                                </div>
                             @endif
 
-                           
+
                             <a href="/blogpost/{{ $post->blogpost_id }}">
                                 <h2>{{$post->title}}</h2>
                             </a>
