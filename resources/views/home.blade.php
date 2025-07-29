@@ -31,9 +31,9 @@
 
                 <!-- Latest News Feed -->
                 <h2 class="atitle">LATEST Today</h2>
-                <div class="latest">
+                <div class="latest" style="padding: 0px;">
                     @foreach ($randomPosts as $post)
-                        <div class="latest-box" style="display: flex; align-items: center; gap: 15px;">
+                        <div class="latest-box" style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px;" >
 
                             <!-- Random Image from Local Folder Script -->
                             @php
@@ -42,9 +42,9 @@
                             @endphp
 
                             @if ($path)
-                                <div style="width: 300px; height: 200px; overflow: hidden; flex-shrink: 0;">
+                                <div style="width: clamp(100px, 20vw, 200px); height: clamp(100px, 20vw, 200px); overflow: hidden; flex-shrink: 0;">
                                     <img src="{{ asset($path) }}" alt="Random Art"
-                                        style="width: 300px; height: 200px; object-fit: cover; display: block;">
+                                        style="width: clamp(100px, 20vw, 200px); height: clamp(100px, 20vw, 200px); object-fit: cover; display: block;">
                                 </div>
                             @endif
 
