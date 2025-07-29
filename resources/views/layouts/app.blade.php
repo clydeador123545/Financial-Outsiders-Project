@@ -14,17 +14,19 @@
 
 <body>
     <header class="top-bar">
-        <div class="logo">
-            <i class='fa-solid fa-sack-dollar sack-logo'></i>
-            <a id="finout" href="/">
-                <h1 style="font-weight: normal;">FinOut</h1>
+        <div class="logo" style="display: flex; align-items: center; height: 100%;">
+            <img src="{{ asset('images/finout_logo.png') }}" alt="FinOut Logo"
+                style="max-height: 40px; height: auto; width: auto; margin-left: 10px;">
+            <a id="finout" href="/" style="text-decoration: none; color: white;">
+                <h1 style="font-weight: normal; margin: 0;">FinOut</h1>
             </a>
         </div>
         <div class="account-links">
             @auth
                 <form action="/logout" method="POST" style="display:inline;">
                     @csrf
-                    <button type="submit" style="background:none; border:none; color:white; cursor:pointer;">Log
+                    <button type="submit"
+                        style="background:none; border:none; color:white; cursor:pointer; font-family: 'Libre Caslon Display', serif; font-size: 18px;">Log
                         Out</button>
                 </form>
 
