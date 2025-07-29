@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    @vite('resources/css/app.css')
 </head>
 <body>
     <header class="top-bar">
@@ -18,7 +20,7 @@
             <a href="/profile">Account</a>
         </div>
     </header>
-    <main>
+    <main class="px-5">
         @yield('content')
     </main>
 </body>
