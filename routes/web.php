@@ -8,10 +8,19 @@ use App\Http\Controllers\RegistrationController;
 use App\Models\Blogposts;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 
 Route::get('/',function() {
-    return view('home');
+    $randomPosts = Blogposts::inRandomOrder()->limit(5)->get();
+    $recommended = Blogposts::inRandomOrder()->limit(2)->get();
+    
+    return view('home', [
+        'randomPosts' => $randomPosts,
+        'recommended' => $recommended
+    ]);
 });
 
 Route::get('/register', function () {
@@ -43,10 +52,16 @@ Route::post('/login', [AuthController::class, 'login']);
 
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
-Route::get('/profile/{id}', function ($id){
+Route::get('/profile/{id}', function ($id) {
     $user = User::findOrFail($id);
-
     return view('profile', ['user' => $user]);
 });
 
+Route::get('/profile', function () {
+    $user = Auth::user();
+    if (!$user) {
+        return redirect('/login');
+    }
+    return view('profile', ['user' => $user]);
+})->middleware('auth');
 

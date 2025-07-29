@@ -13,11 +13,19 @@
     <header class="top-bar">
         <div class="logo">
             <i class='fa-solid fa-sack-dollar sack-logo'></i>
-            <h1>FinOut</h1>
+            <a id="finout" href="/"><h1>FinOut</h1></a>
         </div>
         <div class="account-links">
-            <a href="/login">Log Out</a>
-            <a href="/profile">Account</a>
+            @auth
+                <form action="/logout" method="POST" style="display:inline;">
+                    @csrf
+                    <button type="submit" style="background:none; border:none; color:white; cursor:pointer;">Log Out</button>
+                </form>
+
+                 <a class="toplink" href="/profile">Account</a>
+            @else
+                <a class="toplink" href="/login">Log In</a>
+            @endauth
         </div>
     </header>
     <main class="px-5">
