@@ -5,8 +5,11 @@
     <div class="home-content">
 
         <div class="left-content">
+            <div class="banner">
+                <img class="bimg" src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            </div>
             <div class="recommended">
-                <h2>Recommended For You</h2>
+                <h2 class="atitle">Recommended For You</h2>
                 <div class="links">
                     @foreach ($recommended as $reco)
                     <div class="box">
@@ -16,7 +19,7 @@
                 </div>
             </div>
 
-            <h2>LATEST Today</h2>
+            <h2 class="atitle">LATEST Today</h2>
             <div class="latest">
                 @foreach ($randomPosts as $post)
                     <div class="latest-box">
