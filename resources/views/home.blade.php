@@ -33,7 +33,7 @@
                 <h2 class="atitle">LATEST Today</h2>
                 <div class="latest" style="padding: 0px;">
                     @foreach ($randomPosts as $post)
-                        <div class="latest-box" style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px;" >
+                        <div class="latest-box" style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
 
                             <!-- Random Image from Local Folder Script -->
                             @php
@@ -42,16 +42,23 @@
                             @endphp
 
                             @if ($path)
-                                <div style="width: clamp(100px, 20vw, 200px); height: clamp(100px, 20vw, 200px); overflow: hidden; flex-shrink: 0;">
+                                <div
+                                    style="width: clamp(100px, 20vw, 150px); height: clamp(100px, 20vw, 150px); overflow: hidden; flex-shrink: 0;">
                                     <img src="{{ asset($path) }}" alt="Random Art"
-                                        style="width: clamp(100px, 20vw, 200px); height: clamp(100px, 20vw, 200px); object-fit: cover; display: block;">
+                                        style="width: clamp(100px, 20vw, 150px); height: clamp(100px, 20vw, 150px); object-fit: cover; display: block;">
                                 </div>
                             @endif
 
+                            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 5px;">
 
-                            <a href="/blogpost/{{ $post->blogpost_id }}">
-                                <h2>{{$post->title}}</h2>
-                            </a>
+                                <h2 style="margin: 0; padding: 0;">A</h2>
+
+                                <a href="/blogpost/{{ $post->blogpost_id }}" style="text-decoration: none; padding: 0;">
+                                    <h2 style="margin: 0;">{{ $post->title }}</h2>
+                                </a>
+                                <h3>AA</h3>
+
+                            </div>
                         </div>
                     @endforeach
                 </div>
