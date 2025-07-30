@@ -42,8 +42,12 @@
     flex: 1 1 calc(20% - 10px); 
     box-sizing: border-box;
     background-color: black;
-    margin:10px;
+    margin: 10px;
+
+    /* Solid, sharp-edged shadow */
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.2);
 }
+
 .latest{
     padding:20px;
 }
