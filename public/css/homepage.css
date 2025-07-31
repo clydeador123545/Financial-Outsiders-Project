@@ -44,8 +44,6 @@
     box-sizing: border-box;
     background-color: black;
     margin: 10px;
-
-    /* Solid, sharp-edged shadow */
     box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.2);
 }
 

@@ -56,17 +56,21 @@
     background-color: #dec4a2;
     box-sizing: border-box;
     padding: 20px 20px;
+    
+ 
 }
 
 .suggested a {
     margin: 10px;
+    text-decoration: underline;
+    color: black;
 }
 
 .suggested-container {
     display: flex;
     flex-direction: column;
     flex: 1; /* match the scale of blog-container */
-    max-width: 300px;
+    max-width: 350px;
     width: 20vw;
     box-sizing: border-box;
 }
