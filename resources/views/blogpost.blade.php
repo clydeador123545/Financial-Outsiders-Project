@@ -6,6 +6,13 @@
 <div class="main-content">
 
     <div class="blog-container">
+        <div class="blog-img">
+            @php
+            $image = request('image') ?? 'images/artimages/default.png';
+            @endphp
+
+            <img class="bimg" src="{{ asset($image) }}" alt="Blog image">
+        </div>
         <div class="blog">
 
             <h1>{{ $blogpost->title }}</h1>

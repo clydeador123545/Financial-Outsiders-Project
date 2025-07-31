@@ -39,6 +39,7 @@
                     @php
                     $files = glob(public_path('images/artimages/*.png'));
                     $path = count($files) ? 'images/artimages/' . basename($files[array_rand($files)]) : null;
+                    $imagePath = $path ?? 'images/artimages/default.png';
                     @endphp
 
                     @if ($path)
@@ -53,7 +54,7 @@
 
                         <h2 style="margin: 0; padding: 0;">News Source | Author K.</h2>
 
-                        <a href="/blogpost/{{ $post->blogpost_id }}" style="text-decoration: none; padding: 0;">
+                        <a href="/blogpost/{{ $post->blogpost_id }}?image={{ urlencode($imagePath) }}" style="text-decoration: none; padding: 0;">
                             <h2 style="margin: 0;">{{ $post->title }}</h2>
                         </a>
                         <h3>Sic fili scite tibi vi sactramentum erit praemium Sanguine sanctum absconditum. Donguri wo tadotte mo tsukimasen
