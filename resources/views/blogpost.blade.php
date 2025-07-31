@@ -11,6 +11,7 @@
             <h1>{{ $blogpost->title }}</h1>
             <div class="author-details">
                 <p>Author: {{ $blogpost->author->first_name }} {{ $blogpost->author->last_name }}</p>
+                <h4></h4>
             </div>
             <p>{{ $blogpost->content }}</p>
         </div>

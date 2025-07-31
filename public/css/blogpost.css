@@ -1,32 +1,43 @@
-.main-content{
+.main-content {
     display: flex;
     flex-direction: row;
     gap: 0px;
     align-items: stretch;
     justify-content: center;
     width: 100%;
+    padding: 0 80px;
+    box-sizing: border-box;
 }
 
-.blog{
-    background-color: white;
+.blog {
+    background-color: #EFDBC0;
     text-align: center;
-    width:100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 40px;
 }
 
-.blog-container{
+.blog-container {
     display: flex;
+    flex: 2;
     flex-direction: column;
-    width: 55%;
     height: 100%;
 }
 
-
-.suggested{
+.suggested {
+    flex: 1;
     display: flex;
     flex-direction: column;
     background-color: black;
     max-width: 250px;
+    width: 20vw;
 }
-.suggested a{
-    margin:10px;
+.suggested a {
+    margin: 10px;
+}
+
+.suggested-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
