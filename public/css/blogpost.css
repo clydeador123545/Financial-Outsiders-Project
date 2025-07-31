@@ -1,17 +1,31 @@
-.blog{
-    background-color: white;
-    margin: 10px;
-    text-align: center;
-    width:90%;
-}
 .main-content{
     display: flex;
     flex-direction: row;
-    margin:30px;
+    gap: 0px;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
 }
+
+.blog{
+    background-color: white;
+    text-align: center;
+    width:100%;
+}
+
+.blog-container{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100%;
+}
+
+
 .suggested{
     display: flex;
     flex-direction: column;
+    background-color: black;
+    max-width: 250px;
 }
 .suggested a{
     margin:10px;
