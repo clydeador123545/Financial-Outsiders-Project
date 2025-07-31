@@ -16,9 +16,9 @@
     <header class="top-bar">
         <div class="logo" style="display: flex; align-items: center; height: 100%;">
             <img src="{{ asset('images/finout_logo.png') }}" alt="FinOut Logo"
-                style="max-height: 40px; height: auto; width: auto; margin-left: 10px;">
+                style="max-height: 50px; height: auto; width: auto; margin-left: 10px;">
             <a id="finout" href="/" style="text-decoration: none; color: white;">
-                <h1 style="font-weight: normal; margin: 0;">FinOut</h1>
+                <h1 style="font-weight: normal; margin: 0; font-size: 50px;">FinOut</h1>
             </a>
         </div>
         <div class="account-links">
@@ -26,13 +26,13 @@
                 <form action="/logout" method="POST" style="display:inline;">
                     @csrf
                     <button type="submit"
-                        style="background:none; border:none; color:white; cursor:pointer; font-family: 'Libre Caslon Display', serif; font-size: 18px;">Log
+                        style="background:none; border:none; color:white; cursor:pointer; font-family: 'Libre Caslon Display', serif; font-size: 40px;">Log
                         Out</button>
                 </form>
 
-                <a class="toplink" href="/profile">Account</a>
+                <a class="toplink" style="font-size: 40px;" href="/profile">Account</a>
             @else
-                <a class="toplink" href="/login">Log In</a>
+                <a class="toplink" style="font-size: 40px;" href="/login">Log In</a>
             @endauth
         </div>
     </header>

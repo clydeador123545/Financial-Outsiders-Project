@@ -16,8 +16,8 @@
             </div>
             <div class="blog">
 
-                <h1 style="font-size: clamp(35px, 2.2vw, 100px); margin: 40px 0px 0px 0px;">{{ $blogpost->title }}</h1>
-                <h2 class="author-details" style="margin: 0px; font-weight: normal;">Author: {{ $blogpost->author->first_name }} {{ $blogpost->author->last_name }}</h3>
+                <h1 style="font-size: clamp(35px, 2.2vw, 100px); margin: 40px 0px 0px 0px; letter-spacing: 0.05em;">{{ $blogpost->title }}</h1>
+                <h1 class="author-details" style="margin: 0px; font-weight: normal;">Author: {{ $blogpost->author->first_name }} {{ $blogpost->author->last_name }}</h3>
 
                     <hr style="border: none; height: 0.5px; background-color: black;">
                     <h1></h1>
