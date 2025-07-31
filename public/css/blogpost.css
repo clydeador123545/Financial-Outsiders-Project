@@ -1,18 +1,76 @@
-.blog{
-    background-color: white;
-    margin: 10px;
-    text-align: center;
-    width:90%;
-}
-.main-content{
+.main-content {
     display: flex;
     flex-direction: row;
-    margin:30px;
+    gap: 0px;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    padding: 0 80px;
+    box-sizing: border-box;
+    font-family: "Libre Caslon Display", serif;
+    max-width: 1800px;
+    margin: 0 auto;
+     gap: 0px;
 }
-.suggested{
+
+.blog {
+    background-color: #EFDBC0;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 40px;
+    flex-grow: 2;
+}
+
+.blog-img {
+    height: 34vw;
+    width: 100%;
+    overflow:hidden;
+    max-height: 600px;
+}
+
+.bimg{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.blog-container {
     display: flex;
     flex-direction: column;
+    flex: 2;
+    box-sizing: border-box;
 }
-.suggested a{
-    margin:10px;
+
+.imgpad{
+    height: 34vw;
+    background-color: black;
+    max-height: 600px;
+}
+
+.suggested {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: #dec4a2;
+    box-sizing: border-box;
+    padding: 20px 20px;
+    
+ 
+}
+
+.suggested a {
+    margin: 10px;
+    text-decoration: underline;
+    color: black;
+}
+
+.suggested-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* match the scale of blog-container */
+    max-width: 350px;
+    width: 20vw;
+    box-sizing: border-box;
 }
